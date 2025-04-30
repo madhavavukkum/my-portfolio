@@ -1,32 +1,26 @@
 import { FiBook, FiAward } from 'react-icons/fi'
+import { LuGraduationCap } from "react-icons/lu";
 
 export const education = [
   {
-    degree: 'Master of Computer Science',
-    institution: 'Stanford University',
-    period: '2015 - 2017',
-    description: 'Specialized in Human-Computer Interaction with a focus on user experience design and frontend development. Completed thesis on interactive data visualization techniques.',
-    icon: <FiAward />
+    degree: 'B.Tech in CSE (AI & Data Science)',
+    institution: 'Vishnu Institute of Technology',
+    period: '2022 – 2026',
+    description: 'Focused on AI, Data Science, and full-stack development. GPA: 8.69. Completed projects in NLP, deep learning, and predictive analytics.',
+    icon: <LuGraduationCap />
   },
   {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of California, Berkeley',
-    period: '2011 - 2015',
-    description: 'Graduated with honors. Coursework included web development, algorithms, data structures, and software engineering principles.',
+    degree: 'Intermediate (MPC)',
+    institution: 'Sri Chaitanya Junior College, Vijayawada',
+    period: '2020 – 2022',
+    description: 'Completed MPC stream with a score of 92.9%. Built a strong foundation in mathematics and problem-solving.',
     icon: <FiBook />
   },
   {
-    degree: 'UI/UX Design Certification',
-    institution: 'Interaction Design Foundation',
-    period: '2018',
-    description: 'Professional certification in user interface and experience design, covering design thinking, wireframing, prototyping, and usability testing.',
-    icon: <FiAward />
-  },
-  {
-    degree: 'Full-Stack Web Development Bootcamp',
-    institution: 'Coding Academy',
-    period: '2016',
-    description: 'Intensive 12-week program covering modern web development technologies and best practices, culminating in a capstone project.',
+    degree: 'High School (SSC)',
+    institution: 'Sri Chaitanya Techno School, Rajahmundry',
+    period: '2019 – 2020',
+    description: 'Graduated with a score of 95%, excelling in science and mathematics.',
     icon: <FiBook />
   }
 ]

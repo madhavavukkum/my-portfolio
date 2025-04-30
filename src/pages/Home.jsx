@@ -10,6 +10,7 @@ import SectionTitle from '../components/common/SectionTitle'
 import FeaturedProjects from '../components/home/FeaturedProjects'
 import Skills from '../components/home/Skills'
 import AnimatedArrow from '../components/common/AnimatedArrow'
+import { LuCodeXml } from "react-icons/lu";
 
 const Home = () => {
   const targetRef = useRef(null)
@@ -162,6 +163,15 @@ const Home = () => {
               <SiGeeksforgeeks size={24}/>
             </a>
             <a
+  href="https://codolio.com/profile/Madhava"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+  aria-label="Codolio Portfolio"
+>
+  <LuCodeXml size={24} />
+</a>
+            <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -179,7 +189,7 @@ const Home = () => {
             </a>
           </div>
           {/* Vertical Line */}
-          <div className="w-px bg-gray-300 dark:bg-gray-600 flex-grow mt-6" style={{ height: 'calc(100% - 320px)' }}></div>
+          <div className="w-px bg-gray-400 dark:bg-gray-600 flex-grow mt-6" style={{ height: 'calc(100% - 320px)' }}></div>
         </motion.div>
 
         {/* Content */}
@@ -196,7 +206,7 @@ const Home = () => {
             </motion.div>
             
             <AnimatedText
-              text="Creating Digital Experiences That Matter"
+              text="Hello, I'm  Madhava"
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             />
             

@@ -54,7 +54,7 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-all duration-300 ease-in-out shadow-xl hover:shadow-2xl dark:shadow-none;
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-all duration-300 ease-in-out shadow-xl hover:shadow-2xl dark:shadow-gray-800;
   }
 
   .btn-primary {
@@ -96,9 +96,6 @@
   mix-blend-mode: difference;
 }
 
-.cursor-dot {
-  @apply w-2 h-2 bg-white;
-}
 
 .cursor-ring {
   @apply w-8 h-8 border-2 border-white;

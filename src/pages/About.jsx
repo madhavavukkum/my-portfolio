@@ -27,10 +27,11 @@ const About = () => {
                 About Me
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              I solve problems and create effective solutions.
+                I solve problems and create effective solutions.
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              With expertise in AI, Data Science, and full-stack web development, I build cutting-edge solutions that enhance user experiences and streamline processes. Whether it's crafting dynamic web applications or designing intelligent systems, I focus on creating impactful, scalable, and efficient digital products.              </p>
+                With expertise in AI, Data Science, and full-stack web development, I build cutting-edge solutions that enhance user experiences and streamline processes. Whether it's crafting dynamic web applications or designing intelligent systems, I focus on creating impactful, scalable, and efficient digital products.
+              </p>
               <Button 
                 href="#" 
                 variant="primary"
@@ -122,31 +123,38 @@ const About = () => {
             title="Academic Background"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {education.map((edu, index) => (
-              <motion.div
-                key={index}
-                className="card p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-start mb-4">
-                  <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-500">
-                    {edu.icon}
+          <div className="max-w-3xl mx-auto">
+            <div className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700 space-y-12">
+              {education.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  className="relative"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="absolute -left-[41px] w-5 h-5 rounded-full bg-secondary-500"></div>
+                  <div className="p-6 bg-white dark:bg-dark-700 shadow-md rounded-lg">
+                    <div className="flex items-start mb-4">
+                      <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-500">
+                        {edu.icon}
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-bold">{edu.degree}</h3>
+                        <p className="text-gray-600 dark:text-gray-300">{edu.institution}</p>
+                      </div>
+                      <div className="ml-auto text-right">
+                      <span className="ml-auto px-3 py-1 text-xs font-medium rounded-full bg-secondary-100 dark:bg-secondary-900/30 text-secondary-700 dark:text-secondary-300">
+                      {edu.period}
+                    </span>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300">{edu.description}</p>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-bold">{edu.degree}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">{edu.institution}</p>
-                  </div>
-                  <div className="ml-auto text-right">
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{edu.period}</span>
-                  </div>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300">{edu.description}</p>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -194,7 +202,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      
       
       {/* CTA Section */}
       <section className="py-20 bg-primary-500 text-white">
