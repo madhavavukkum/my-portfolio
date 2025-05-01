@@ -54,12 +54,31 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Designer at work"
-                  className="w-full h-auto"
-                />
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    alt="Designer at work" 
+                    className="w-full h-auto"
+                  />
+                </div>
+                <Button
+                  href="https://codolio.com/profile/Madhava"
+                  target="_blank"
+                  className="absolute -bottom-6 -left-6 p-5 bg-primary-500 rounded-lg shadow-lg hover:bg-primary-600 transition-colors z-10"
+                  aria-label="Visit Codolio Profile"
+                >
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center">
+                      <span className="block text-sm text-white dark:text-white">Coded with</span>
+                      <span className="block text-3xl font-bold text-secondary-300">Purpose</span>
+                    </div>
+                    <div className="text-center">
+                      <span className="block text-3xl font-bold text-secondary-300">300+</span>
+                      <span className="block text-sm text-white dark:text-white">DSA Problems Solved</span>
+                    </div>
+                  </div>
+                </Button>
               </div>
             </motion.div>
           </div>
@@ -106,32 +125,44 @@ const About = () => {
 
       {/* Education Section */}
       <section className="py-20 bg-white dark:bg-dark-800">
-        <div className="container mx-auto px-4">
-          <SectionTitle subtitle="My Education" title="Academic Background" />
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-8">
-              {education.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex items-start">
-                    <div>
-                      <h3 className="text-lg font-bold">{edu.degree}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{edu.institution}</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{edu.period}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.description}</p>
-                </motion.div>
-              ))}
+  <div className="container mx-auto px-4">
+    <SectionTitle subtitle="My Education" title="Academic Background" />
+    <div className="max-w-3xl mx-auto">
+      <div className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700 space-y-12">
+        {education.map((edu, index) => (
+          <motion.div
+            key={index}
+            className="relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="absolute -left-[41px] w-5 h-5 rounded-full bg-secondary-500"></div>
+            <div className="p-6 bg-white dark:bg-dark-700 shadow-md rounded-lg">
+              <div className="flex items-start mb-4">
+                <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-500">
+                  {edu.icon}
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-bold">{edu.degree}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{edu.institution}</p>
+                </div>
+                <div className="ml-auto text-right">
+                  <span className="ml-auto px-3 py-1 text-xs font-medium rounded-full bg-secondary-100 dark:bg-secondary-900/30 text-secondary-700 dark:text-secondary-300">
+                    {edu.period}
+                  </span>
+                </div>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">{edu.description}</p>
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Skills Section */}
       <section className="py-20 bg-gray-50 dark:bg-dark-900">
