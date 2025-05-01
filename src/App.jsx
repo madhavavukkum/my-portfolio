@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import CustomCursor from './components/common/CustomCursor'
-import Preloader from './components/common/Preloader'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Home from './pages/Home'
@@ -12,6 +11,7 @@ import ProjectDetail from './pages/ProjectDetail'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import { useCursor } from './context/CursorContext'
+import Loader from './components/common/Loader'
 
 function App() {
   const location = useLocation()
@@ -22,7 +22,7 @@ function App() {
     // Simulate content loading
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1200)
+    }, 1400)
     
     return () => clearTimeout(timer)
   }, [])
@@ -35,7 +35,7 @@ function App() {
   return (
     <div className={`App ${showCustomCursor ? 'has-custom-cursor' : ''}`}>
       {loading ? (
-        <Preloader />
+        <Loader />
       ) : (
         <>
           {showCustomCursor && <CustomCursor />}
