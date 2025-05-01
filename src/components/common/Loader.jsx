@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTheme } from '/src/context/ThemeContext.jsx';
 
 const Loader = () => {
+  const { darkMode } = useTheme();
+
   return (
-    <StyledWrapper>
+    <StyledWrapper darkMode={darkMode}>
       <div className="spinner">
         <div />
         <div />
@@ -12,24 +15,24 @@ const Loader = () => {
         <div />
         <div />
       </div>
-      <LoadingText>Loading...</LoadingText>
+      <LoadingText darkMode={darkMode}>Loading...</LoadingText>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  background-color: #000; /* Optional: Add a background color to make it stand out */
-  position: fixed; /* Fixes the loader in place */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  
+  background-color: ${({ darkMode }) => (darkMode ? '#1a1a1a' : '#fff')};
+
   .spinner {
     width: 44px;
     height: 44px;
@@ -38,11 +41,12 @@ const StyledWrapper = styled.div`
   }
 
   .spinner > div {
-    background-color: rgba(0,77,255,0.2);
+    background-color: ${({ darkMode }) =>
+      darkMode ? 'rgba(59, 130, 246, 0.3)' : 'rgba(59, 130, 246, 0.2)'};
     height: 100%;
     position: absolute;
     width: 100%;
-    border: 2px solid #004dff;
+    border: 2px solid ${({ darkMode }) => (darkMode ? '#60a5fa' : '#3b82f6')};
   }
 
   .spinner div:nth-of-type(1) {
@@ -77,11 +81,9 @@ const StyledWrapper = styled.div`
     0% {
       transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
     }
-
     50% {
       transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
     }
-
     100% {
       transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
     }
@@ -89,10 +91,10 @@ const StyledWrapper = styled.div`
 `;
 
 const LoadingText = styled.div`
-  color: #fff; /* White text */
-  font-size: 18px; /* Size of the text */
-  margin-top: 20px; /* Space between the spinner and the text */
-  font-weight: 600; /* Optional: Make the text bold */
+  color: ${({ darkMode }) => (darkMode ? '#fff' : '#000')};
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 600;
 `;
 
 export default Loader;

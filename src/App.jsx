@@ -22,7 +22,7 @@ function App() {
     // Simulate content loading
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1400)
+    }, 1250)
     
     return () => clearTimeout(timer)
   }, [])
