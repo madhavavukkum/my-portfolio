@@ -136,7 +136,7 @@ const Home = () => {
         >
           <div className="flex flex-col items-center gap-6 mt-20">
             <a
-              href="https://github.com"
+              href="https://github.com/madhavapavan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -145,7 +145,7 @@ const Home = () => {
               <FiGithub size={24} />
             </a>
             <a
-              href="https://leetcode.com"
+              href="https://leetcode.com/u/PTpT3kvydS"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -154,25 +154,25 @@ const Home = () => {
               <SiLeetcode size={24} />
             </a>
             <a
-              href="https://leetcode.com"
+              href="https://www.geeksforgeeks.org/user/madhavap6tsj"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-              aria-label="LeetCode Profile"
+              aria-label="GeeksforGeeks Profile"
             >
-              <SiGeeksforgeeks size={24}/>
+              <SiGeeksforgeeks size={24} />
             </a>
             <a
-  href="https://codolio.com/profile/Madhava"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-  aria-label="Codolio Portfolio"
->
-  <LuCodeXml size={24} />
-</a>
+              href="https://codolio.com/profile/Madhava"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+              aria-label="Codolio Portfolio"
+            >
+              <LuCodeXml size={24} />
+            </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/madhavavukkum"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -181,7 +181,7 @@ const Home = () => {
               <FiLinkedin size={24} />
             </a>
             <a
-              href="mailto:example@example.com"
+              href="mailto:madhavavukkum@gmail.com"
               className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
               aria-label="Email"
             >
@@ -216,8 +216,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              I'm a passionate designer and developer crafting beautiful, functional digital experiences with a focus on animation and interaction.
-            </motion.p>
+              I'm a passionate developer driven by curiosity in web development and AI, dedicated to building innovative, efficient, and impactful digital solutions.            </motion.p>
             
             <motion.div
               className="flex flex-col sm:flex-row justify-center gap-4"
@@ -275,20 +274,20 @@ const Home = () => {
               <div className="relative">
                 <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    src="homeimg.jpg" // Replace with actual image path
                     alt="Creative workspace" 
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <a
-                  href="/path/to/resume.pdf" // Replace with actual resume file path
-                  download
-                  className="absolute -bottom-6 -right-6 p-4 bg-primary-500 text-white rounded-lg shadow-lg flex items-center gap-2 hover:bg-primary-600 transition-colors"
+                <Button
+                  href="https://drive.google.com/file/d/1E_1Wc9GsZoW5vFR1hgzimfT-Oxa9HriC/view?usp=sharing"
+                  target="_blank"
+                  className="absolute -bottom-6 -right-6 p-4 bg-primary-500 text-white hover:text-white rounded-lg shadow-lg flex items-center gap-2 transition-colors z-10"
                   aria-label="Download Resume"
                 >
-                  <FiDownload size={18} />
-                  <span className="text-sm font-medium">Download Resume</span>
-                </a>
+                  <FiDownload size={18} className="text-white" />
+                  <span className="text-sm font-medium text-white">Download Resume</span>
+                </Button>
               </div>
             </motion.div>
             

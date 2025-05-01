@@ -9,9 +9,8 @@ import { projects } from '../../data/projects'
 import AnimatedArrow from '../common/AnimatedArrow'
 
 const FeaturedProjects = () => {
-  // Get only featured projects
+  // Get only featured projects, limited to 5
   const featuredProjects = projects.filter(project => project.featured).slice(0, 5)
-
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-dark-900">
@@ -23,7 +22,7 @@ const FeaturedProjects = () => {
         
         <div className="mb-12">
           <div className="flex flex-wrap gap-8">
-            {featuredProjects.slice(0, 3).map((project, index) => (
+            {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -35,28 +34,14 @@ const FeaturedProjects = () => {
                 <ProjectCard project={project} />
               </motion.div>
             ))}
-          </div>
-          <div className="flex justify-center gap-8 mt-8">
-            {featuredProjects.slice(3, 4).map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)]"
-              >
-                <ProjectCard project={project} />
-              </motion.div>
-            ))}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-center"
+              className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)] flex items-center justify-center"
             >
-              <Button to="/projects" variant="outline">
+              <Button to="/projects" variant="outline" className="w-full h-full flex items-center justify-center">
                 View All Projects 
                 <AnimatedArrow className="ml-2" />
               </Button>

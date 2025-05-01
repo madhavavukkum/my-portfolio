@@ -19,26 +19,7 @@ export const projects = [
     githubUrl: 'https://github.com/madhavapavan/cipherchat',
     featured: true
   },
-  {
-    id: 'finance-dashboard',
-    title: 'Financial Analytics Dashboard',
-    excerpt: 'An interactive dashboard for financial data visualization and analysis with real-time updates.',
-    description: 'A sophisticated financial analytics dashboard that visualizes complex data in an intuitive interface, helping users make informed decisions based on real-time market information.',
-    challenge: 'The client needed a way to visualize complex financial data in real-time, allowing users to identify trends, track investments, and make informed decisions quickly.',
-    solution: 'I built a responsive dashboard with interactive charts and data visualizations that update in real-time. The application features customizable widgets, dark/light modes, and export capabilities for reports. Advanced filtering options allow users to drill down into specific data points.',
-    thumbnail: 'https://images.pexels.com/photos/7681023/pexels-photo-7681023.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    images: [
-      'https://images.pexels.com/photos/7681025/pexels-photo-7681025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      'https://images.pexels.com/photos/7692467/pexels-photo-7692467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    ],
-    technologies: ['React', 'D3.js', 'Node.js', 'WebSockets', 'Express', 'PostgreSQL'],
-    categories: ['web', 'data visualization', 'finance'],
-    client: 'InvestTrack Financial',
-    date: 'October 2023',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    featured: true
-  },
+  
   {
     "id": "apex-chat",
     "title": "Apex - AI Chat Application",
@@ -101,23 +82,43 @@ export const projects = [
     featured: true
   },
   {
-    id: 'real-estate-platform',
-    title: 'Modern Real Estate Platform',
-    excerpt: 'A comprehensive real estate marketplace with virtual tours, advanced filtering, and agent connection.',
-    description: 'A cutting-edge real estate platform that streamlines property searching, viewing, and purchasing while providing valuable tools for both buyers and agents.',
-    challenge: 'The client needed to modernize their traditional real estate business with a digital platform that could showcase properties effectively, connect buyers with agents, and provide detailed analytics on market trends.',
-    solution: 'I built a feature-rich real estate platform with 3D virtual tours, advanced search filters, and saved preferences. The platform includes neighborhood insights, price history, and direct messaging with agents. For the agency, the admin dashboard provides detailed analytics on listing performance and buyer engagement.',
-    thumbnail: 'https://images.pexels.com/photos/1546166/pexels-photo-1546166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 'petrol-price-prediction',
+    title: 'Petrol Price Prediction & Analysis',
+    excerpt: 'Analyzed and predicted petrol prices across major Indian cities using machine learning and data visualization.',
+    description: 'This project processes and analyzes petrol prices across Indian metros using real-world data. It applies data preprocessing, correlation heatmaps, and multiple ML models including Linear Regression and Random Forest to predict average petrol prices and identify city-wise trends.',
+    challenge: 'Accurately modeling and predicting petrol prices required cleaning noisy data, handling missing values, and identifying meaningful relationships between city-wise prices.',
+    solution: 'I performed extensive preprocessing and exploratory data analysis on a real Kaggle dataset. Built models using Linear Regression and Random Forest, evaluated with MAE/MSE/R², and visualized actual vs predicted performance. Grid search was used to optimize hyperparameters for better accuracy.',
+    thumbnail: 'https://images.pexels.com/photos/2480625/pexels-photo-2480625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     images: [
-      'https://images.pexels.com/photos/7031607/pexels-photo-7031607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      'https://images.pexels.com/photos/7031408/pexels-photo-7031408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      'https://images.pexels.com/photos/92090/pexels-photo-92090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      'https://images.pexels.com/photos/2480625/pexels-photo-2480625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ],
-    technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Three.js', 'Google Maps API'],
-    categories: ['web', 'real estate'],
-    client: 'Premier Properties',
-    date: 'November 2023',
+    technologies: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Scikit-learn'],
+    categories: ['data science', 'machine learning'],
+    client: 'Personal Project',
+    date: 'April 2024',
+    liveUrl: 'https://colab.research.google.com/drive/1XRqrPBWrFYU4xxbIL9xxmBQ6lZ9-4Soy?usp=sharing',
+    githubUrl: 'https://github.com/madhavapavan/petrol-price-prediction',
+    featured: false
+  },
+  {
+    id: 'finance-dashboard',
+    title: 'Financial Analytics Dashboard',
+    excerpt: 'An interactive dashboard for financial data visualization and analysis with real-time updates.',
+    description: 'A sophisticated financial analytics dashboard that visualizes complex data in an intuitive interface, helping users make informed decisions based on real-time market information.',
+    challenge: 'The client needed a way to visualize complex financial data in real-time, allowing users to identify trends, track investments, and make informed decisions quickly.',
+    solution: 'I built a responsive dashboard with interactive charts and data visualizations that update in real-time. The application features customizable widgets, dark/light modes, and export capabilities for reports. Advanced filtering options allow users to drill down into specific data points.',
+    thumbnail: 'https://images.pexels.com/photos/7681023/pexels-photo-7681023.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    images: [
+      'https://images.pexels.com/photos/7681025/pexels-photo-7681025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      'https://images.pexels.com/photos/7692467/pexels-photo-7692467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    ],
+    technologies: ['React', 'D3.js', 'Node.js', 'WebSockets', 'Express', 'PostgreSQL'],
+    categories: ['web', 'data visualization', 'finance'],
+    client: 'InvestTrack Financial',
+    date: 'October 2023',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    featured: false
+    featured: true
   }
 ]

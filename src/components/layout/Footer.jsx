@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { LuCodeXml } from "react-icons/lu";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   
   const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com', label: 'GitHub' },
-    { icon: <FiLinkedin />, url: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <FiTwitter />, url: 'https://twitter.com', label: 'Twitter' },
-    { icon: <FiMail />, url: 'mailto:hello@example.com', label: 'Email' }
+    { icon: <FiGithub />, url: 'https://github.com/madhavapavan', label: 'GitHub' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/madhavavukkum', label: 'LinkedIn' },
+    { icon: <LuCodeXml />, url: 'https://codolio.com/profile/Madhava', label: 'Codolio' },
+    { icon: <FiMail />, url: 'mailto:madhavavukkum@gmail.com', label: 'Email' }
   ]
+  
   
   const footerLinks = [
     { label: 'Home', path: '/' },
@@ -68,21 +70,21 @@ const Footer = () => {
           
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">Web Development</span>
-              </li>
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">UI/UX Design</span>
-              </li>
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">Mobile Applications</span>
-              </li>
-              <li>
-                <span className="text-gray-600 dark:text-gray-400">Branding & Strategy</span>
-              </li>
-            </ul>
+          <h3 className="text-lg font-semibold mb-4">Projects & Interests</h3>
+          <ul className="space-y-2">
+            <li>
+              <span className="text-gray-600 dark:text-gray-400">Web Development</span>
+            </li>
+            <li>
+              <span className="text-gray-600 dark:text-gray-400">AI & Machine Learning</span>
+            </li>
+            <li>
+              <span className="text-gray-600 dark:text-gray-400">Data Analytics</span>
+            </li>
+            <li>
+              <span className="text-gray-600 dark:text-gray-400">Real-time Applications</span>
+            </li>
+          </ul>
           </div>
           
           {/* Contact */}
