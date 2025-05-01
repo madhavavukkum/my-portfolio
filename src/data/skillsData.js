@@ -1,6 +1,6 @@
 export const skillsData = {
     "Frontend": [
-      { name: "React / React Native", logo: "FaReact" },
+      { name: "React", logo: "FaReact" },
       { name: "JavaScript / ES6+", logo: "FaJsSquare" },
       { name: "HTML5 / CSS3", logo: "FaHtml5" },
       { name: "Tailwind CSS", logo: "SiTailwindcss" },
