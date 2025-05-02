@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import CustomCursor from './components/common/CustomCursor'
@@ -17,15 +17,24 @@ function App() {
   const location = useLocation()
   const [loading, setLoading] = useState(true)
   const { showCustomCursor } = useCursor()
-  
+  const hasLoadedRef = useRef(false)
   useEffect(() => {
-    // Simulate content loading
-    const timer = setTimeout(() => {
+    // Show loader only on first load (not on route change)
+    if (!hasLoadedRef.current) {
+      const timer = setTimeout(() => {
+        setLoading(false)
+        hasLoadedRef.current = true
+      }, 1250) // You can fine-tune this timing
+      return () => clearTimeout(timer)
+    } else {
       setLoading(false)
-    }, 1250)
-    
-    return () => clearTimeout(timer)
+    }
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
 
   // Scroll to top on route change
   useEffect(() => {
