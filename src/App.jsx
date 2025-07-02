@@ -18,6 +18,21 @@ function App() {
   const [loading, setLoading] = useState(true)
   const { showCustomCursor } = useCursor()
   const hasLoadedRef = useRef(false)
+
+  // useEffect(() => {
+  //   // Simulate content loading
+  //   const timer = setTimeout(() => {
+  //     setLoading(false)
+  //   }, 1250)
+    
+  //   return () => clearTimeout(timer)
+  // }, [])
+
+  // // Scroll to top on route change
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [location.pathname])
+  
   useEffect(() => {
     // Show loader only on first load (not on route change)
     if (!hasLoadedRef.current) {
