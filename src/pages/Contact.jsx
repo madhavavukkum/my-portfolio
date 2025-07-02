@@ -190,21 +190,6 @@ const Contact = () => {
 
                   <div className="flex items-start">
                     <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg text-primary-500 mr-4">
-                      <FiPhone size={20} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Phone</h4>
-                      <a
-                        href="tel:+918885254565"
-                        className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
-                      >
-                        +91 8885254565
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg text-primary-500 mr-4">
                       <FiMapPin size={20} />
                     </div>
                     <div>
