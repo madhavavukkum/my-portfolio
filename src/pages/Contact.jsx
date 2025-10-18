@@ -64,7 +64,7 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/madhavapavan',
+      url: 'https://github.com/madhavavukkum',
       icon: <FiGithub size={24} />,
     },
     {

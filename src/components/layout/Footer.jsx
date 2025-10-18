@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com/madhavapavan', label: 'GitHub' },
+    { icon: <FiGithub />, url: 'https://github.com/madhavavukkum', label: 'GitHub' },
     { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/madhavavukkum', label: 'LinkedIn' },
     { icon: <LuCodeXml />, url: 'https://codolio.com/profile/Madhava', label: 'Codolio' },
     { icon: <FiMail />, url: 'mailto:madhavavukkum@gmail.com', label: 'Email' }
@@ -30,9 +30,9 @@ const Footer = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-wrap justify-between items-center gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
         <motion.div
-          className="text-center md:text-left"
+          className="text-center md:text-left w-full md:w-auto"
           initial={{ y: 20 }}
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
@@ -63,7 +63,7 @@ const Footer = () => {
         </motion.div>
 
         <motion.div
-          className="w-full md:w-auto text-center"
+          className="w-full md:w-auto text-center md:text-right"
           initial={{ y: 20 }}
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
