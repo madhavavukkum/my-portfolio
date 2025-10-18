@@ -47,7 +47,7 @@ const Projects = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="pt-32 pb-20">
+      <section id="projects" className="pt-32 pb-20">
         <div className="container">
           <SectionTitle 
             subtitle="My Portfolio"

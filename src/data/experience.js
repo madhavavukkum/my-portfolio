@@ -1,18 +1,20 @@
 import { FiCode, FiLayout, FiMonitor, FiSmartphone } from 'react-icons/fi'
 
 export const experience = [
-  {
-    role: 'MERN Stack Intern',
-    company: 'Excler',
-    period: 'May 2024 – Jun 2024',
-    description: 'Underwent intensive MERN stack training covering MongoDB, Express.js, React.js, and Node.js. Focused on understanding full-stack architecture and core concepts.',
-    achievements: [
-      'Completed hands-on training in MERN stack technologies',
-      'Built basic CRUD apps as part of practice exercises',
-      'Gained understanding of API integration and backend services',
-      'Focused on component-based architecture with React'
-    ]
-  },
+{
+  role: 'Frontend Developer Intern',
+  company: 'Aranyu Technologies Pvt Ltd',
+  period: 'May 2025 – Aug 2025',
+  location: 'Kakinada',
+  description: 'Collaborated with a small team to develop a responsive web version of the company’s mobile app using React.js, HTML, and CSS, ensuring a smooth user experience across devices.',
+  achievements: [
+    'Developed responsive web interfaces using React.js, HTML, and CSS',
+    'Ensured cross-device compatibility and smooth UX',
+    'Supported backend by setting up MongoDB collections',
+    'Implemented JWT-based authentication system',
+  ]
+}
+,
   {
     role: 'AI/ML Intern',
     company: 'EduSkills',
