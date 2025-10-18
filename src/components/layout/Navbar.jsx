@@ -78,7 +78,7 @@ const Navbar = () => {
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, 'home')}
-          className="relative z-50"
+          className="relative z-50 focus:outline-none"
         >
           <div className="text-2xl font-bold text-dark-900 dark:text-white">
             Madhava
@@ -92,7 +92,7 @@ const Navbar = () => {
               key={link.id}
               href={`#${link.id}`}
               onClick={(e) => handleNavClick(e, link.id)}
-              className="text-base font-medium transition-colors duration-300 text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
+              className="text-base font-medium transition-colors duration-300 text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 focus:outline-none"
             >
               {link.label}
             </a>
@@ -102,38 +102,13 @@ const Navbar = () => {
         {/* Theme Toggle and Menu Button on the right */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <motion.button
-            className="md:hidden relative z-50 p-2 text-dark-900 dark:text-white hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+          <button
+            className="md:hidden relative z-50 p-2 text-dark-900 dark:text-white hover:bg-white/5 hover:text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
             aria-label="Toggle menu"
           >
-            <AnimatePresence initial={false} mode="wait">
-              {isOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ opacity: 0, rotate: -90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 90 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <FiX className="w-6 h-6" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ opacity: 0, rotate: 90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: -90 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <FiMenu className="w-6 h-6" />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.button>
+            {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -145,6 +120,7 @@ const Navbar = () => {
               animate="open"
               exit="closed"
               variants={menuVariants}
+              style={{ overflow: 'hidden' }}
             >
               <nav className="flex flex-col space-y-6 text-center">
                 {navLinks.map((link, index) => (
@@ -157,7 +133,7 @@ const Navbar = () => {
                     <a
                       href={`#${link.id}`}
                       onClick={(e) => handleNavClick(e, link.id)}
-                      className="block text-xl font-medium text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
+                      className="block text-xl font-medium text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 focus:outline-none"
                     >
                       {link.label}
                     </a>
