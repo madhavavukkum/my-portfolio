@@ -70,7 +70,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3 glass shadow-lg' : 'py-5'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md shadow-lg' : 'py-5 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md'}`}
       style={{ width: '100vw', maxWidth: '100%' }}
     >
       <div className="container mx-auto flex items-center justify-between px-4 relative">
@@ -94,7 +94,7 @@ const Navbar = () => {
               onClick={(e) => handleNavClick(e, link.id)}
               className="text-base font-medium transition-colors duration-300 text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
             >
-              <span>{link.label}</span>
+              {link.label}
             </a>
           ))}
         </nav>
@@ -103,12 +103,12 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           <motion.button
-            className="md:hidden relative z-50 p-2"
+            className="md:hidden relative z-50 p-2 text-dark-900 dark:text-white hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             onClick={() => setIsOpen(!isOpen)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            aria-label="Menu"
+            aria-label="Toggle menu"
           >
             <AnimatePresence initial={false} mode="wait">
               {isOpen ? (
@@ -140,12 +140,11 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="fixed top-0 left-0 bottom-0 w-64 bg-white dark:bg-dark-800 z-40 flex flex-col justify-center p-8 md:hidden"
+              className="fixed top-0 left-0 w-64 h-screen bg-white/80 dark:bg-dark-800/80 backdrop-blur-md z-40 flex flex-col justify-center p-8 md:hidden"
               initial="closed"
               animate="open"
               exit="closed"
               variants={menuVariants}
-              style={{ overflow: 'hidden' }}
             >
               <nav className="flex flex-col space-y-6 text-center">
                 {navLinks.map((link, index) => (
@@ -158,7 +157,7 @@ const Navbar = () => {
                     <a
                       href={`#${link.id}`}
                       onClick={(e) => handleNavClick(e, link.id)}
-                      className="text-xl font-medium text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
+                      className="block text-xl font-medium text-dark-800 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400"
                     >
                       {link.label}
                     </a>

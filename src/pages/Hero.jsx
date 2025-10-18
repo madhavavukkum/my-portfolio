@@ -135,13 +135,19 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <Button
-            to="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="bg-primary-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-600 hover:shadow-lg transition-all duration-300 min-w-[180px]"
           >
             View My Work <FiArrowRight className="ml-2 inline" />
           </Button>
           <Button
-            to="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-6 py-3 rounded-full font-semibold hover:border-primary-500 hover:text-primary-500 dark:hover:text-primary-400 hover:shadow-lg transition-all duration-300 min-w-[180px]"
           >
             Get in Touch
