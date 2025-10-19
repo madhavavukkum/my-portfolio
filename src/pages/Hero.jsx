@@ -117,7 +117,7 @@ const Hero = () => {
           </span>
         </motion.div>
         <AnimatedText
-          text="Hello, I'm Madhava"
+          text="Hello,   I'm   Madhava"
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 mx-auto"
         />
         <motion.p
