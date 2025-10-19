@@ -70,7 +70,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md shadow-lg' : 'py-5 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'py-3 bg-white/80 dark:bg-dark-800/80 backdrop-blur-md shadow-lg'
+          : 'py-5 bg-transparent'
+      }`}
       style={{ width: '100vw', maxWidth: '100%' }}
     >
       <div className="container mx-auto flex items-center justify-between px-4 relative">
@@ -103,7 +107,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           <button
-            className="md:hidden relative z-50 p-2 text-dark-900 dark:text-white hover:bg-white/5 hover:text-white focus:outline-none"
+            className="md:hidden relative z-50 p-2 text-dark-900 dark:text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
